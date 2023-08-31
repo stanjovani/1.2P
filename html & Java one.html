@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Sample with JavaScript Results</title>
+    <style>
+        /* ... [Your original CSS here] ... */
+
+        /* Additional styles for the JavaScript results section */
+        #output {
+            margin-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            This is a sample responsive webpage. Resize the browser window to see the content adapt to different screen sizes.
+            Below I have put a 7900XT, it's the card I own. The CSS ensures that the content of the photo and text is presented neatly and responsively across different screen sizes.
+        </p>
+        <img src="https://pg.asrock.com/Graphics-Card/features/Radeon%20RX%207900%20XT%20Phantom%20Gaming%2020GB%20OC.jpg" alt="Radeon RX 7900 XT Phantom Gaming 20GB OC">
+
+        <!-- JavaScript Results Section -->
+        <h2>JavaScript Methods Results</h2>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        // Function to append results to the output div
+        function displayResult(message) {
+            document.getElementById("output").innerHTML += message + "<br>";
+        }
+
+        // String methods
+        let str = "Hello, World!";
+        displayResult("Original string: " + str);
+        displayResult("Uppercase: " + str.toUpperCase());
+        displayResult("Lowercase: " + str.toLowerCase());
+        displayResult("Index of 'World': " + str.indexOf("World"));
+        displayResult("Substring: " + str.substring(0, 5));
+        displayResult("Replaced 'World' with 'JavaScript': " + str.replace("World", "JavaScript"));
+
+        // Number methods
+        let num = 123.4567;
+        displayResult("<br>Original number: " + num);
+        displayResult("Rounded: " + Math.round(num));
+        displayResult("Ceiling: " + Math.ceil(num));
+        displayResult("Floor: " + Math.floor(num));
+        displayResult("To fixed 2 decimal places: " + num.toFixed(2));
+        displayResult("Value as a string: " + num.toString());
+
+        // Array methods
+        let arr = [1, 2, 3, "a", "b", "c"];
+        displayResult("<br>Original array: " + arr);
+        displayResult("Joined array: " + arr.join("-"));
+        arr.reverse();
+        displayResult("Reversed array: " + arr);
+        arr.push("d");
+        displayResult("After push: " + arr);
+        arr.shift();
+        displayResult("After shift: " + arr);
+        displayResult("Filtered numbers: " + arr.filter(item => typeof item === "number"));
+
+        // Date methods
+        let date = new Date();
+        displayResult("<br>Current date: " + date);
+        displayResult("Year: " + date.getFullYear());
+        displayResult("Month (0-based): " + date.getMonth());
+        displayResult("Date: " + date.getDate());
+        displayResult("Day of the week: " + date.getDay());
+        displayResult("Hours: " + date.getHours());
+
+        // Function methods
+        function greet(name) {
+            return "Hello, " + name + "!";
+        }
+
+        function calculateSum(a, b) {
+            return a + b;
+        }
+
+        displayResult("<br>Greeting: " + greet("Alice"));
+        displayResult("Sum of 5 and 7: " + calculateSum(5, 7));
+    </script>
+
+</body>
+</html>
